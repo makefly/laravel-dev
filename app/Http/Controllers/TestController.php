@@ -9,7 +9,9 @@
 namespace App\Http\Controllers;
 
 
-class TestController
+use Symfony\Component\HttpKernel\HttpKernel;
+
+class TestController extends HttpKernel
 {
 
 }
