@@ -18,7 +18,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/articles', 'ArticlesController@create');
+Route::get('/users',function(){
+    return 'Users!';
+});
 
-Auth::routes();
+Route::get('users','UserController@getIndex');
 
-Route::get('/home', 'HomeController@index');
+Route::get('/foo', array('https', function(){
+    return "happy!!!!";
+}));
+
+Route::get('hello',function(){
+    return 'hello usrs!';
+});
